@@ -8,7 +8,7 @@ export default function Footer() {
         {/* Column 1: Brand Info */}
         <div className="flex flex-col gap-5 text-left">
           <a href="/index.html" className="flex items-center group w-max focus:outline-none" aria-label="Rockers Entertainers Home">
-            <img src="/logo.png" alt="Rockers Entertainers Logo" className="h-24 w-auto object-contain transition-transform duration-500 group-hover:scale-105" />
+            <img src="/logo.png" alt="Rockers Entertainers Logo" className="h-32 sm:h-40 md:h-48 w-auto object-contain transition-transform duration-500 group-hover:scale-105" />
           </a>
           <p className="text-sm text-gray-500 leading-relaxed font-light">
             Turning Celebrations Into Unforgettable Experiences. Providing high-end execution, styling, and decorations since 2014.
