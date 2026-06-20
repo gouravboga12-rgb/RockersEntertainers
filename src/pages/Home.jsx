@@ -201,54 +201,55 @@ Looking forward to your response!`
   return (
     <div>
       {/* 1. Hero Section */}
-      <section className="relative min-h-[95vh] flex items-center justify-center bg-brand-dark text-white overflow-hidden py-24 bg-hero-glow">
+      <section className="relative min-h-screen flex items-center justify-start bg-brand-dark text-white overflow-hidden py-24">
+        {/* Background Image & Dual Gradient Overlays (inspired by nikhilevents.com) */}
         <div className="absolute inset-0 z-0">
           <img 
             src="/hero_background.jpg" 
             alt="Luxury Event Setup Backdrop" 
-            className="w-full h-full object-cover object-center opacity-40 scale-105 transition-transform duration-1000"
-            style={{ filter: 'brightness(0.6) contrast(1.15)' }}
+            className="w-full h-full object-cover object-center opacity-75 scale-105 transition-transform duration-1000"
+            style={{ filter: 'brightness(0.8) contrast(1.1)' }}
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/80 to-brand-dark/50"></div>
+          {/* Left-to-right dark overlay for text contrast */}
+          <div className="absolute inset-0 bg-gradient-to-r from-brand-darker via-brand-darker/60 to-transparent"></div>
+          {/* Bottom-to-top gradient for blending with next section */}
+          <div className="absolute inset-0 bg-gradient-to-t from-brand-darker via-transparent to-brand-darker/35"></div>
         </div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center" data-aos="zoom-in" data-aos-duration="1200">
-          <div className="bg-brand-dark/40 backdrop-blur-md border border-white/5 rounded-3xl p-6 sm:p-12 md:p-16 shadow-2xl shadow-black/60 max-w-3xl mx-auto relative overflow-hidden">
-            {/* Subtle background gradient glow inside the card */}
-            <div className="absolute -top-24 -left-24 w-48 h-48 bg-brand-gold/10 rounded-full blur-3xl pointer-events-none"></div>
-            <div className="absolute -bottom-24 -right-24 w-48 h-48 bg-brand-red/10 rounded-full blur-3xl pointer-events-none"></div>
-
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full text-left" data-aos="fade-up" data-aos-duration="1200">
+          <div className="max-w-3xl">
             <span 
-              className="relative z-10 inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-gold/20 border border-brand-gold/30 text-brand-gold-light text-xs font-bold tracking-widest uppercase mb-6"
+              className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-gold/20 border border-brand-gold/30 text-brand-gold-light text-xs font-bold tracking-widest uppercase mb-6"
             >
               <i className="fas fa-star text-[10px] animate-pulse text-brand-gold"></i> Event Styling & Planning Specialists
             </span>
 
             <h1 
-              className="relative z-10 text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight text-white mb-6 leading-tight"
-              style={{ textShadow: '0 4px 16px rgba(0,0,0,0.85), 0 2px 4px rgba(0,0,0,0.5)' }}
+              className="text-4xl sm:text-6xl md:text-8xl font-black tracking-tight text-white mb-6 leading-[1.1] uppercase font-sans"
+              style={{ textShadow: '0 4px 12px rgba(0,0,0,0.5)' }}
             >
-              Rockers <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-red via-[#e27478] to-brand-gold">Entertainers</span>
+              Rockers <br className="hidden md:inline" />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-red via-[#e27478] to-brand-gold">Entertainers</span>
             </h1>
 
             <h2 
-              className="relative z-10 text-lg sm:text-xl md:text-2xl font-serif italic text-brand-gold-light mb-6 leading-relaxed font-light"
-              style={{ textShadow: '0 2px 8px rgba(0,0,0,0.9)' }}
+              className="text-lg sm:text-xl md:text-2xl font-serif italic text-brand-gold-light mb-6 leading-relaxed font-light"
+              style={{ textShadow: '0 2px 6px rgba(0,0,0,0.6)' }}
             >
               "Turning Celebrations Into Unforgettable Experiences"
             </h2>
 
             <p 
-              className="relative z-10 text-xs sm:text-sm text-gray-300 mb-8 max-w-xl mx-auto font-light leading-relaxed tracking-wide"
-              style={{ textShadow: '0 2px 6px rgba(0,0,0,0.9)' }}
+              className="text-sm sm:text-base text-gray-300 mb-10 max-w-2xl font-light leading-relaxed tracking-wide"
+              style={{ textShadow: '0 2px 4px rgba(0,0,0,0.6)' }}
             >
               Professional event planning, decoration, entertainment management, and execution services for weddings, birthdays, corporate affairs, and special occasions.
             </p>
 
-            <div className="relative z-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+            <div className="flex flex-col sm:flex-row items-center justify-start gap-4">
               <a 
                 href="/contact.html#contact-form"
-                className="inline-flex items-center justify-center w-full sm:w-auto px-8 py-3.5 bg-gradient-to-r from-brand-red to-brand-gold hover:from-brand-gold hover:to-brand-gold-dark text-white font-bold rounded-full shadow-xl hover:shadow-brand-red/20 transform hover:-translate-y-0.5 transition-all duration-300 text-xs uppercase tracking-widest focus:outline-none cursor-pointer"
+                className="inline-flex items-center justify-center w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-brand-red to-brand-gold hover:from-brand-gold hover:to-brand-gold-dark text-white font-bold rounded-full shadow-xl shadow-brand-red/30 hover:scale-105 active:scale-95 transform transition-all duration-300 text-xs uppercase tracking-widest focus:outline-none cursor-pointer"
               >
                 <i className="fas fa-calendar-check mr-2 text-sm"></i> Book Your Event
               </a>
@@ -256,7 +257,7 @@ Looking forward to your response!`
                 href="https://wa.me/919966468877?text=Hello%2C%20I%20would%20like%20to%20know%20more%20about%20your%20event%20services." 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="inline-flex items-center justify-center w-full sm:w-auto px-8 py-3.5 bg-white/5 hover:bg-white/10 text-white font-semibold rounded-full border border-white/20 hover:border-white/40 transform hover:-translate-y-0.5 transition-all duration-300 text-xs uppercase tracking-widest"
+                className="inline-flex items-center justify-center w-full sm:w-auto px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-full border border-white/20 hover:border-white/40 hover:scale-105 active:scale-95 transform transition-all duration-300 text-xs uppercase tracking-widest backdrop-blur-md"
               >
                 <i className="fab fa-whatsapp mr-2 text-green-400 text-base"></i> Chat on WhatsApp
               </a>
@@ -264,12 +265,10 @@ Looking forward to your response!`
           </div>
         </div>
 
-        {/* Scroll Mouse Icon */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-gray-400 select-none animate-bounce">
-          <span className="text-[9px] uppercase tracking-widest text-brand-gold font-semibold">Scroll</span>
-          <div className="w-5 h-9 border border-brand-gold/30 rounded-full flex justify-center p-1.5">
-            <div className="w-1 h-1 bg-brand-gold rounded-full mouse-scroll-wheel"></div>
-          </div>
+        {/* Scroll Mouse Icon (inspired by nikhilevents.com) */}
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-gray-400 select-none animate-bounce z-10">
+          <span className="text-[9px] uppercase tracking-widest text-brand-gold font-semibold">Scroll Down</span>
+          <i className="fas fa-chevron-down text-brand-gold text-xs"></i>
         </div>
       </section>
 
