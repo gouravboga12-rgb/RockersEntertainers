@@ -50,8 +50,8 @@ export default function Navbar() {
     <header 
       className={`fixed top-0 left-0 right-0 z-40 transition-all duration-500 ${
         scrolled 
-          ? 'py-3 bg-brand-dark/98 backdrop-blur-xl border-b border-white/5 shadow-xl shadow-black/40' 
-          : 'py-5 bg-brand-dark/95 backdrop-blur-xl border-b border-white/5'
+          ? 'py-1.5 sm:py-3 bg-brand-dark/98 backdrop-blur-xl border-b border-white/5 shadow-xl shadow-black/40' 
+          : 'py-3 sm:py-5 bg-brand-dark/95 backdrop-blur-xl border-b border-white/5'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -66,7 +66,7 @@ export default function Navbar() {
             <img 
               src="/logo.png" 
               alt="Rockers Entertainers Logo" 
-              className="h-16 sm:h-20 w-auto object-contain transition-transform duration-500 group-hover:scale-105" 
+              className="h-20 sm:h-24 w-auto object-contain transition-transform duration-500 group-hover:scale-105" 
             />
           </a>
 
