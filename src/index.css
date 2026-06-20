@@ -1,0 +1,231 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-red: #C51D24;
+  --color-brand-lightred: #E22D35;
+  --color-brand-darkred: #8F1015;
+  --color-brand-gold: #C5A880;
+  --color-brand-gold-light: #E2D1B9;
+  --color-brand-gold-dark: #A1845C;
+  --color-brand-dark: #0B0F19;
+  --color-brand-darker: #05070C;
+  --color-brand-gray: #FAF9F6;
+  --color-brand-light: #FFFFFF;
+}
+
+/* Base HTML & Scroll behavior */
+:root {
+  scroll-behavior: smooth;
+}
+
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+  color: #111827;
+  background-color: #FAF9F6;
+}
+
+h1, h2, h3, h4, h5, h6, .font-serif {
+  font-family: 'Playfair Display', serif;
+}
+
+/* Custom Styled Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #05070C;
+}
+::-webkit-scrollbar-thumb {
+  background: #C5A880;
+  border: 2px solid #05070C;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #C51D24;
+}
+
+/* Infinite Marquee Logo Carousel */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 30s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Floating WhatsApp Pulsing Effect */
+@keyframes whatsapp-pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7);
+  }
+  70% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 12px rgba(34, 197, 94, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0);
+  }
+}
+
+.whatsapp-btn-pulse {
+  animation: whatsapp-pulse 2s infinite;
+}
+
+/* Premium Card Hover Lifts */
+.premium-card {
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  border: 1px solid rgba(197, 168, 128, 0.08);
+}
+
+.premium-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px -15px rgba(197, 168, 128, 0.15);
+  border-color: rgba(197, 168, 128, 0.3);
+}
+
+/* Glow Borders for Premium Cards */
+.glow-border {
+  position: relative;
+  overflow: hidden;
+}
+.glow-border::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(197,168,128,0.3), rgba(255,255,255,0.05));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
+.glow-border:hover::after {
+  opacity: 1;
+}
+
+/* Glassmorphism Styles */
+.glass-header {
+  background: rgba(11, 15, 25, 0.8);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(197, 168, 128, 0.15);
+}
+
+.glass-card-dark {
+  background: rgba(11, 15, 25, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+/* Ambient Radial Glow */
+.bg-radial-glow {
+  background: radial-gradient(circle at 50% 50%, rgba(197, 168, 128, 0.1) 0%, rgba(197, 29, 36, 0.05) 40%, transparent 70%);
+}
+
+.bg-hero-glow {
+  background: radial-gradient(circle at 80% 20%, rgba(197, 168, 128, 0.15) 0%, rgba(11, 15, 25, 0) 60%),
+              radial-gradient(circle at 20% 80%, rgba(197, 29, 36, 0.1) 0%, rgba(11, 15, 25, 0) 60%);
+}
+
+/* Gradients */
+.text-gold-gradient {
+  background: linear-gradient(135deg, #FFF9F2 20%, #E2D1B9 60%, #A1845C 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gold-accent-gradient {
+  background: linear-gradient(135deg, #E2D1B9 0%, #C5A880 50%, #A1845C 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bg-gold-gradient {
+  background: linear-gradient(135deg, #E2D1B9 0%, #C5A880 50%, #A1845C 100%);
+}
+
+/* Image Hover Zoom Effects */
+.zoom-img-container {
+  overflow: hidden;
+}
+
+.zoom-img-container img {
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.zoom-img-container:hover img {
+  transform: scale(1.08);
+}
+
+/* Hide scrollbars for sliders */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Custom premium badge divider */
+.premium-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+.premium-divider::before, .premium-divider::after {
+  content: '';
+  height: 1px;
+  width: 50px;
+  background: linear-gradient(90deg, transparent, rgba(197, 168, 128, 0.4), transparent);
+}
+
+/* Mouse Scroll Animation */
+@keyframes scroll-mouse {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(6px);
+    opacity: 0.3;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.mouse-scroll-wheel {
+  animation: scroll-mouse 2s infinite ease-in-out;
+}
