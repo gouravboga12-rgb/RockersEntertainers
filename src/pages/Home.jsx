@@ -669,7 +669,7 @@ Looking forward to your response!`
       </section>
 
       {/* 8. Contact Integrated Section (Short Version at Bottom of Page) */}
-      <section className="py-24 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 bg-radial-glow" data-aos="fade-up" id="contact-form">
+      <section className="py-24 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 bg-radial-glow scroll-mt-28 sm:scroll-mt-36" data-aos="fade-up" id="contact-form">
         <div className="bg-white rounded-3xl shadow-2xl p-8 sm:p-10 border border-gray-100/85 text-left">
           <div className="text-center mb-8">
             <span className="text-xs uppercase tracking-widest text-brand-gold font-bold mb-2 block">Quick Inquiry</span>
