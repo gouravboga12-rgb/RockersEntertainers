@@ -206,10 +206,10 @@ Looking forward to your response!`
           <img 
             src="/hero_background.jpg" 
             alt="Luxury Event Setup Backdrop" 
-            className="w-full h-full object-cover object-center opacity-50 scale-105 transition-transform duration-1000"
-            style={{ filter: 'brightness(0.5) contrast(1.15)' }}
+            className="w-full h-full object-cover object-center opacity-90 scale-105 transition-transform duration-1000"
+            style={{ filter: 'brightness(0.75) contrast(1.1)' }}
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/75 to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/30 to-brand-dark/10"></div>
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
