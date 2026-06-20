@@ -138,11 +138,13 @@ export default function Services() {
 
       {/* Services Grid Section */}
       <section className="py-28 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 bg-radial-glow">
-        <div className="grid grid-cols-1 gap-6 md:gap-10 max-w-3xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 items-start">
           {services.map((service, idx) => (
             <div 
               key={idx}
-              className="bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-100/80 flex flex-col h-auto premium-card glow-border w-full"
+              className={`bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-100/80 flex flex-col h-auto premium-card glow-border w-full ${
+                idx === 6 ? 'col-span-1 sm:col-span-2 lg:col-span-3 lg:max-w-md lg:mx-auto' : ''
+              }`}
               data-aos="fade-up"
               data-aos-delay={100 * (idx % 3 + 1)}
             >
