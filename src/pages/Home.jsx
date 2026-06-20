@@ -206,14 +206,14 @@ Looking forward to your response!`
           <img 
             src="/hero_background.jpg" 
             alt="Luxury Event Setup Backdrop" 
-            className="w-full h-full object-cover object-center opacity-90 scale-105 transition-transform duration-1000"
-            style={{ filter: 'brightness(0.75) contrast(1.1)' }}
+            className="w-full h-full object-cover object-center opacity-40 scale-105 transition-transform duration-1000"
+            style={{ filter: 'brightness(0.6) contrast(1.15)' }}
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/30 to-brand-dark/10"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/80 to-brand-dark/50"></div>
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center" data-aos="zoom-in" data-aos-duration="1200">
-          <div className="bg-brand-dark/60 backdrop-blur-md border border-white/10 rounded-3xl p-6 sm:p-12 md:p-16 shadow-2xl shadow-black/80 max-w-3xl mx-auto relative overflow-hidden">
+          <div className="bg-brand-dark/40 backdrop-blur-md border border-white/5 rounded-3xl p-6 sm:p-12 md:p-16 shadow-2xl shadow-black/60 max-w-3xl mx-auto relative overflow-hidden">
             {/* Subtle background gradient glow inside the card */}
             <div className="absolute -top-24 -left-24 w-48 h-48 bg-brand-gold/10 rounded-full blur-3xl pointer-events-none"></div>
             <div className="absolute -bottom-24 -right-24 w-48 h-48 bg-brand-red/10 rounded-full blur-3xl pointer-events-none"></div>
