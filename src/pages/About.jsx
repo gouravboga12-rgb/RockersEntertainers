@@ -87,7 +87,7 @@ export default function About() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-24 text-left">
             {/* Vision */}
-            <div className="bg-[#0d1220]/90 rounded-3xl p-8 sm:p-10 border border-brand-gold/15 flex gap-6 items-start hover:border-brand-gold/40 transition-all duration-500 backdrop-blur-xl shadow-2xl" data-aos="fade-up" data-aos-delay="100">
+            <div className="bg-brand-darker/90 rounded-3xl p-8 sm:p-10 border border-brand-gold/15 flex gap-6 items-start hover:border-brand-gold/40 transition-all duration-500 backdrop-blur-xl shadow-2xl" data-aos="fade-up" data-aos-delay="100">
               <div className="w-14 h-14 rounded-2xl bg-brand-gold/10 flex items-center justify-center text-brand-gold text-2xl shrink-0 border border-brand-gold/15">
                 <i className="fas fa-eye"></i>
               </div>
@@ -100,7 +100,7 @@ export default function About() {
             </div>
 
             {/* Mission */}
-            <div className="bg-[#0d1220]/90 rounded-3xl p-8 sm:p-10 border border-brand-gold/15 flex gap-6 items-start hover:border-brand-gold/40 transition-all duration-500 backdrop-blur-xl shadow-2xl" data-aos="fade-up" data-aos-delay="200">
+            <div className="bg-brand-darker/90 rounded-3xl p-8 sm:p-10 border border-brand-gold/15 flex gap-6 items-start hover:border-brand-gold/40 transition-all duration-500 backdrop-blur-xl shadow-2xl" data-aos="fade-up" data-aos-delay="200">
               <div className="w-14 h-14 rounded-2xl bg-brand-gold/10 flex items-center justify-center text-brand-gold text-2xl shrink-0 border border-brand-gold/15">
                 <i className="fas fa-bullseye"></i>
               </div>
@@ -123,7 +123,7 @@ export default function About() {
             {values.map((v, index) => (
               <div 
                 key={index}
-                className="bg-[#0d1220]/90 hover:bg-[#11172a] border border-white/5 hover:border-brand-gold/30 rounded-2xl p-6 transition-all duration-500 flex flex-col items-center shadow-lg hover:shadow-brand-gold/5" 
+                className="bg-brand-darker/90 hover:bg-brand-dark border border-white/5 hover:border-brand-gold/30 rounded-2xl p-6 transition-all duration-500 flex flex-col items-center shadow-lg hover:shadow-brand-gold/5" 
                 data-aos="fade-up" 
                 data-aos-delay={100 * (index + 1)}
               >
@@ -150,7 +150,7 @@ export default function About() {
             {strengths.map((s, idx) => (
               <div 
                 key={idx}
-                className="bg-[#0d1220]/80 border border-white/5 hover:border-brand-gold/30 rounded-3xl p-6 transition-all duration-500 shadow-xl"
+                className="bg-brand-darker/80 border border-white/5 hover:border-brand-gold/30 rounded-3xl p-6 transition-all duration-500 shadow-xl"
                 data-aos="fade-up"
                 data-aos-delay={100 * (idx % 4 + 1)}
               >

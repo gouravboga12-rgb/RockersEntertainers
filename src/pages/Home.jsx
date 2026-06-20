@@ -550,7 +550,7 @@ Looking forward to your response!`
             {previewGalleryItems.map((item, idx) => (
               <div 
                 key={idx}
-                className="bg-[#0d1220] rounded-2xl overflow-hidden shadow-md border border-white/5 group hover:-translate-y-1.5 hover:shadow-xl transition-all duration-300 cursor-pointer flex flex-col justify-between"
+                className="bg-brand-darker rounded-2xl overflow-hidden shadow-md border border-white/5 group hover:-translate-y-1.5 hover:shadow-xl transition-all duration-300 cursor-pointer flex flex-col justify-between"
                 onClick={() => openLightbox(idx)}
                 data-aos="fade-up"
                 data-aos-delay={100 * (idx % 4 + 1)}
@@ -566,7 +566,7 @@ Looking forward to your response!`
                   </div>
                 </div>
 
-                <div className="p-3.5 bg-[#0d1220] text-left">
+                <div className="p-3.5 bg-brand-darker text-left">
                   <span className="text-[9px] uppercase tracking-widest text-brand-gold font-bold">{item.category}</span>
                   <h3 className="font-bold text-xs text-gray-300 mt-0.5 truncate group-hover:text-brand-gold transition-colors duration-300">{item.title}</h3>
                 </div>
@@ -597,7 +597,7 @@ Looking forward to your response!`
           <div className="w-16 h-[2px] bg-brand-gold mx-auto"></div>
         </div>
 
-        <div className="relative bg-[#0d1220] rounded-3xl shadow-2xl p-8 sm:p-14 border border-white/5 max-w-4xl mx-auto backdrop-blur-xl">
+        <div className="relative bg-brand-darker rounded-3xl shadow-2xl p-8 sm:p-14 border border-white/5 max-w-4xl mx-auto backdrop-blur-xl">
           <div className="absolute top-4 left-6 text-brand-gold/10 text-9xl pointer-events-none font-serif select-none">“</div>
           
           <div className="relative z-10 min-h-[180px] flex items-center justify-center">

@@ -92,7 +92,7 @@ Looking forward to your response!`
               </p>
               
               <ul className="flex flex-col gap-6">
-                <li className="bg-[#0d1220] rounded-3xl p-5 border border-white/5 flex items-start gap-4 hover:border-brand-gold/40 transition duration-500 shadow-xl">
+                <li className="bg-brand-darker rounded-3xl p-5 border border-white/5 flex items-start gap-4 hover:border-brand-gold/40 transition duration-500 shadow-xl">
                   <div className="w-12 h-12 rounded-2xl bg-brand-gold/10 flex items-center justify-center text-brand-gold text-lg shrink-0 border border-brand-gold/15">
                     <i className="fas fa-phone-alt"></i>
                   </div>
@@ -102,7 +102,7 @@ Looking forward to your response!`
                     <p className="text-[10px] text-gray-500 mt-0.5 uppercase tracking-wider font-semibold">Mon - Sun, 9:00 AM - 9:00 PM</p>
                   </div>
                 </li>
-                <li className="bg-[#0d1220] rounded-3xl p-5 border border-white/5 flex items-start gap-4 hover:border-brand-gold/40 transition duration-500 shadow-xl">
+                <li className="bg-brand-darker rounded-3xl p-5 border border-white/5 flex items-start gap-4 hover:border-brand-gold/40 transition duration-500 shadow-xl">
                   <div className="w-12 h-12 rounded-2xl bg-green-500/10 flex items-center justify-center text-green-500 text-xl shrink-0 border border-green-500/15">
                     <i className="fab fa-whatsapp"></i>
                   </div>
@@ -115,7 +115,7 @@ Looking forward to your response!`
                     <p className="text-[10px] text-gray-500 mt-0.5 uppercase tracking-wider font-semibold">Response within 15 minutes</p>
                   </div>
                 </li>
-                <li className="bg-[#0d1220] rounded-3xl p-5 border border-white/5 flex items-start gap-4 hover:border-brand-gold/40 transition duration-500 shadow-xl">
+                <li className="bg-brand-darker rounded-3xl p-5 border border-white/5 flex items-start gap-4 hover:border-brand-gold/40 transition duration-500 shadow-xl">
                   <div className="w-12 h-12 rounded-2xl bg-brand-gold/10 flex items-center justify-center text-brand-gold text-lg shrink-0 border border-brand-gold/15">
                     <i className="fas fa-envelope"></i>
                   </div>
