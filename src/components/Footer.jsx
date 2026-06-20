@@ -30,7 +30,7 @@ export default function Footer() {
             <li><a href="/about.html" className="hover:text-brand-gold transition-colors duration-300">About Company</a></li>
             <li><a href="/services.html" className="hover:text-brand-gold transition-colors duration-300">Our Services</a></li>
             <li><a href="/gallery.html" className="hover:text-brand-gold transition-colors duration-300">Photo & Video Gallery</a></li>
-            <li><a href="/contact.html" className="hover:text-brand-gold transition-colors duration-300">Contact Us</a></li>
+            <li><a href="/contact.html#contact-form" className="hover:text-brand-gold transition-colors duration-300">Contact Us</a></li>
           </ul>
         </div>
 

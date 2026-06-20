@@ -10,7 +10,7 @@ export default function Navbar() {
     'About': '/about.html',
     'Services': '/services.html',
     'Gallery': '/gallery.html',
-    'Contact': '/contact.html'
+    'Contact': '/contact.html#contact-form'
   }
 
   useEffect(() => {
@@ -24,6 +24,14 @@ export default function Navbar() {
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
+
+  const handleLinkClick = (e, item) => {
+    if ((item === 'Contact' || item === 'BookEvent') && window.location.pathname.includes('contact.html')) {
+      e.preventDefault()
+      document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' })
+      setMobileMenuOpen(false)
+    }
+  }
 
   // Automatically determine the active item based on the browser's URL path
   const getActiveItem = () => {
@@ -42,8 +50,8 @@ export default function Navbar() {
     <header 
       className={`fixed top-0 left-0 right-0 z-40 transition-all duration-500 ${
         scrolled 
-          ? 'py-3 bg-brand-dark/95 backdrop-blur-xl border-b border-white/5 shadow-xl' 
-          : 'py-5 bg-brand-dark/80 backdrop-blur-md border-b border-white/5'
+          ? 'py-3 bg-brand-dark/98 backdrop-blur-xl border-b border-white/5 shadow-xl shadow-black/40' 
+          : 'py-5 bg-brand-dark/95 backdrop-blur-xl border-b border-white/5'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -68,6 +76,7 @@ export default function Navbar() {
               <a
                 key={item}
                 href={menuLinks[item]}
+                onClick={(e) => handleLinkClick(e, item)}
                 className={`text-xs uppercase tracking-widest font-semibold transition-all duration-300 relative py-1.5 focus:outline-none cursor-pointer ${
                   activeItem === item 
                     ? 'text-brand-gold' 
@@ -88,7 +97,8 @@ export default function Navbar() {
           {/* Desktop CTA */}
           <div className="hidden md:block">
             <a 
-              href="/contact.html"
+              href="/contact.html#contact-form"
+              onClick={(e) => handleLinkClick(e, 'BookEvent')}
               className="relative inline-flex items-center justify-center px-6 py-2.5 bg-gradient-to-r from-brand-red to-brand-darkred hover:from-brand-gold hover:to-brand-gold-dark text-white font-bold rounded-full shadow-lg hover:shadow-brand-red/20 transform hover:-translate-y-0.5 transition-all duration-300 text-xs uppercase tracking-wider focus:outline-none overflow-hidden group cursor-pointer"
             >
               <span className="relative z-10">Book Your Event</span>
@@ -120,6 +130,7 @@ export default function Navbar() {
               <a
                 key={item}
                 href={menuLinks[item]}
+                onClick={(e) => handleLinkClick(e, item)}
                 className={`text-left text-xs uppercase tracking-widest font-semibold py-3 border-b border-white/5 transition-colors duration-300 focus:outline-none ${
                   activeItem === item ? 'text-brand-gold' : 'text-gray-300 hover:text-brand-gold'
                 }`}
@@ -128,7 +139,8 @@ export default function Navbar() {
               </a>
             ))}
             <a 
-              href="/contact.html"
+              href="/contact.html#contact-form"
+              onClick={(e) => handleLinkClick(e, 'BookEvent')}
               className="mt-4 inline-flex items-center justify-center w-full py-3.5 bg-gradient-to-r from-brand-red to-brand-darkred text-white text-xs uppercase tracking-widest font-bold rounded-full shadow-lg focus:outline-none text-center"
             >
               Book Your Event

@@ -204,9 +204,9 @@ Looking forward to your response!`
       <section className="relative min-h-[95vh] flex items-center justify-center bg-brand-dark text-white overflow-hidden py-24 bg-hero-glow">
         <div className="absolute inset-0 z-0">
           <img 
-            src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=1600&auto=format&fit=crop" 
+            src="/hero_background.jpg" 
             alt="Luxury Event Setup Backdrop" 
-            className="w-full h-full object-cover object-center opacity-30 scale-105 transition-transform duration-1000"
+            className="w-full h-full object-cover object-center opacity-50 scale-105 transition-transform duration-1000"
             style={{ filter: 'brightness(0.5) contrast(1.15)' }}
           />
           <div className="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/75 to-transparent"></div>
@@ -234,7 +234,7 @@ Looking forward to your response!`
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4" data-aos="fade-up" data-aos-delay="400">
             <a 
-              href="/contact.html"
+              href="/contact.html#contact-form"
               className="inline-flex items-center justify-center w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-brand-red to-brand-darkred hover:from-brand-gold hover:to-brand-gold-dark text-white font-bold rounded-full shadow-xl hover:shadow-brand-red/20 transform hover:-translate-y-1 transition-all duration-500 text-xs uppercase tracking-widest focus:outline-none cursor-pointer"
             >
               <i className="fas fa-calendar-check mr-2 text-sm"></i> Book Your Event
@@ -449,11 +449,11 @@ Looking forward to your response!`
             </p>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6 items-start">
+          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6">
             {services.map((service, idx) => (
               <div 
                 key={idx}
-                className="bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-100/80 flex flex-col premium-card glow-border"
+                className="bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-100/80 flex flex-col h-full premium-card glow-border"
                 data-aos="fade-up"
                 data-aos-delay={100 * (idx + 1)}
               >

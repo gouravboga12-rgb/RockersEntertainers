@@ -2,50 +2,58 @@ import React, { useState, useEffect, useRef } from 'react'
 
 // Sub-component to manage hover-playback behavior for video grid items
 function VideoGridItem({ item, onClick }) {
+  const [isHovered, setIsHovered] = useState(false)
   const videoRef = useRef(null)
 
-  const handleMouseEnter = () => {
-    if (videoRef.current) {
+  useEffect(() => {
+    if (isHovered && videoRef.current) {
       videoRef.current.play().catch(() => {
         // Safe catch for browsers blocking autoplay
       })
     }
-  }
+  }, [isHovered])
 
-  const handleMouseLeave = () => {
-    if (videoRef.current) {
-      videoRef.current.pause()
-      videoRef.current.currentTime = 0
-    }
+  // Get relevant placeholder images from public/photos folder for instant loading
+  const getThumbnail = (cat) => {
+    if (cat === 'Weddings') return '/photos/p20.jpeg'
+    if (cat === 'Birthdays') return '/photos/p7 birthday.jpeg'
+    return '/photos/p33.jpeg' // Dance Events
   }
 
   return (
     <div 
       className="bg-white rounded-2xl overflow-hidden shadow-md border border-gray-50 group hover:-translate-y-2 hover:shadow-xl transition-all duration-300 cursor-pointer flex flex-col justify-between"
       onClick={onClick}
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
     >
       <div className="aspect-[4/3] overflow-hidden relative bg-black">
-        <video 
-          ref={videoRef}
-          src={item.img} 
-          muted 
-          loop 
-          playsInline
-          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
-          preload="metadata"
-        />
+        {isHovered ? (
+          <video 
+            ref={videoRef}
+            src={item.img} 
+            muted 
+            loop 
+            playsInline
+            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
+            preload="auto"
+          />
+        ) : (
+          <img 
+            src={getThumbnail(item.category)} 
+            alt={item.title} 
+            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-80" 
+          />
+        )}
         
         {/* Play Icon Overlay */}
-        <div className="absolute inset-0 bg-brand-dark/25 flex items-center justify-center transition-opacity duration-300">
-          <div className="w-14 h-14 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center text-white text-2xl border border-white/30 transform group-hover:scale-110 transition-transform duration-300 shadow-lg">
-            <i className="fas fa-play ml-1 text-white"></i>
+        {!isHovered && (
+          <div className="absolute inset-0 bg-brand-dark/25 flex items-center justify-center transition-opacity duration-300">
+            <div className="w-14 h-14 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center text-white text-2xl border border-white/30 transform group-hover:scale-110 transition-transform duration-300 shadow-lg">
+              <i className="fas fa-play ml-1 text-white"></i>
+            </div>
           </div>
-        </div>
-
-        {/* Hover Overlay Glow */}
-        <div className="absolute inset-0 bg-brand-dark/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+        )}
       </div>
 
       <div className="p-3 sm:p-5 flex items-center justify-between bg-white text-left">
