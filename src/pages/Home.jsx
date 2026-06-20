@@ -1,6 +1,35 @@
 import React, { useState, useEffect } from 'react'
 import LogoMarquee from '../components/LogoMarquee'
 
+function Typewriter({ text, delay = 80, className = "", startDelay = 0 }) {
+  const [currentText, setCurrentText] = useState('');
+  const [started, setStarted] = useState(false);
+
+  useEffect(() => {
+    const startTimer = setTimeout(() => {
+      setStarted(true);
+    }, startDelay);
+    return () => clearTimeout(startTimer);
+  }, [startDelay]);
+
+  useEffect(() => {
+    if (!started) return;
+    let currentIndex = 0;
+    const interval = setInterval(() => {
+      if (currentIndex < text.length) {
+        setCurrentText(text.substring(0, currentIndex + 1));
+        currentIndex++;
+      } else {
+        clearInterval(interval);
+      }
+    }, delay);
+
+    return () => clearInterval(interval);
+  }, [started, text, delay]);
+
+  return <span className={className}>{currentText}</span>;
+}
+
 export default function Home() {
   const [activeTestimonial, setActiveTestimonial] = useState(0)
 
@@ -216,7 +245,7 @@ Looking forward to your response!`
           <div className="absolute inset-0 bg-gradient-to-t from-brand-darker via-transparent to-brand-darker/35"></div>
         </div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full text-left" data-aos="fade-up" data-aos-duration="1200">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full text-left">
           <div className="max-w-3xl">
             <span 
               className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-gold/20 border border-brand-gold/30 text-brand-gold-light text-xs font-bold tracking-widest uppercase mb-6"
@@ -226,17 +255,19 @@ Looking forward to your response!`
 
             <h1 
               className="text-4xl sm:text-6xl md:text-8xl font-black tracking-tight text-white mb-6 leading-[1.1] uppercase font-sans"
-              style={{ textShadow: '0 4px 12px rgba(0,0,0,0.5)' }}
+              style={{ textShadow: '0 4px 12px rgba(0,0,0,0.5)', minHeight: '1.2em' }}
             >
-              Rockers <br className="hidden md:inline" />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-red via-[#e27478] to-brand-gold">Entertainers</span>
+              <Typewriter text="Rockers" delay={80} startDelay={0} /> <br className="hidden md:inline" />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-red via-[#e27478] to-brand-gold">
+                <Typewriter text="Entertainers" delay={80} startDelay={600} />
+              </span>
             </h1>
 
             <h2 
               className="text-lg sm:text-xl md:text-2xl font-serif italic text-brand-gold-light mb-6 leading-relaxed font-light"
-              style={{ textShadow: '0 2px 6px rgba(0,0,0,0.6)' }}
+              style={{ textShadow: '0 2px 6px rgba(0,0,0,0.6)', minHeight: '1.5em' }}
             >
-              "Turning Celebrations Into Unforgettable Experiences"
+              <Typewriter text='"Turning Celebrations Into Unforgettable Experiences"' delay={40} startDelay={1500} />
             </h2>
 
             <p 
@@ -247,20 +278,22 @@ Looking forward to your response!`
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-start gap-4">
-              <a 
-                href="/contact.html#contact-form"
-                className="inline-flex items-center justify-center w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-brand-red to-brand-gold hover:from-brand-gold hover:to-brand-gold-dark text-white font-bold rounded-full shadow-xl shadow-brand-red/30 hover:scale-105 active:scale-95 transform transition-all duration-300 text-xs uppercase tracking-widest focus:outline-none cursor-pointer"
-              >
-                <i className="fas fa-calendar-check mr-2 text-sm"></i> Book Your Event
-              </a>
-              <a 
-                href="https://wa.me/919966468877?text=Hello%2C%20I%20would%20like%20to%20know%20more%20about%20your%20event%20services." 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="inline-flex items-center justify-center w-full sm:w-auto px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-full border border-white/20 hover:border-white/40 hover:scale-105 active:scale-95 transform transition-all duration-300 text-xs uppercase tracking-widest backdrop-blur-md"
-              >
-                <i className="fab fa-whatsapp mr-2 text-green-400 text-base"></i> Chat on WhatsApp
-              </a>
+              <div className="w-full sm:w-auto opacity-0 animate-popup-1">
+                <a 
+                  href="/contact.html#contact-form"
+                  className="inline-flex items-center justify-center w-full px-8 py-4 bg-gradient-to-r from-brand-red to-brand-gold hover:from-brand-gold hover:to-brand-gold-dark text-white font-bold rounded-full shadow-xl shadow-brand-red/30 hover:scale-105 active:scale-95 transform transition-all duration-300 text-xs uppercase tracking-widest focus:outline-none cursor-pointer"
+                >
+                  <i className="fas fa-calendar-check mr-2 text-sm"></i> Book Your Event
+                </a>
+              </div>
+              <div className="w-full sm:w-auto opacity-0 animate-popup-2">
+                <a 
+                  href="/services.html" 
+                  className="inline-flex items-center justify-center w-full px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-full border border-white/20 hover:border-white/40 hover:scale-105 active:scale-95 transform transition-all duration-300 text-xs uppercase tracking-widest backdrop-blur-md"
+                >
+                  <i className="fas fa-sparkles mr-2 text-brand-gold text-base"></i> View Services
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -462,11 +495,11 @@ Looking forward to your response!`
             </p>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6">
+          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6 items-start">
             {services.map((service, idx) => (
               <div 
                 key={idx}
-                className="bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-100/80 flex flex-col h-full premium-card glow-border"
+                className="bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-100/80 flex flex-col h-auto premium-card glow-border"
                 data-aos="fade-up"
                 data-aos-delay={100 * (idx + 1)}
               >
