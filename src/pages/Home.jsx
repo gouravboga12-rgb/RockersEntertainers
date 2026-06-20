@@ -495,11 +495,11 @@ Looking forward to your response!`
             </p>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6 items-start">
+          <div className="grid grid-cols-1 gap-6 md:gap-10 max-w-3xl mx-auto">
             {services.map((service, idx) => (
               <div 
                 key={idx}
-                className="bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-100/80 flex flex-col h-auto premium-card glow-border"
+                className="bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-100/80 flex flex-col h-auto premium-card glow-border w-full"
                 data-aos="fade-up"
                 data-aos-delay={100 * (idx + 1)}
               >
