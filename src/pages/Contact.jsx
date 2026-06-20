@@ -131,11 +131,11 @@ Looking forward to your response!`
 
           {/* Form Column */}
           <div className="lg:col-span-7 text-left" data-aos="fade-left">
-            <div className="bg-white rounded-3xl shadow-2xl p-8 sm:p-10 border border-gray-100/80">
+            <div className="bg-white rounded-3xl shadow-2xl p-8 sm:p-10 border border-gray-100/80" id="contact-form">
               <h3 className="text-xl sm:text-2xl font-bold font-serif text-brand-dark mb-2">Send Us A Message</h3>
               <p className="text-xs text-gray-400 mb-8">All fields are required. Submit will open WhatsApp.</p>
               
-              <form onSubmit={handleSubmit} className="flex flex-col gap-6" id="contact-form">
+              <form onSubmit={handleSubmit} className="flex flex-col gap-6">
                 <div className="flex flex-col gap-1.5">
                   <label htmlFor="name" className="text-[10px] uppercase tracking-wider font-bold text-gray-500">Full Name</label>
                   <div className="relative">

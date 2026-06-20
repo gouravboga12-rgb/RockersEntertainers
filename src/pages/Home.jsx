@@ -669,7 +669,7 @@ Looking forward to your response!`
       </section>
 
       {/* 8. Contact Integrated Section (Short Version at Bottom of Page) */}
-      <section className="py-24 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 bg-radial-glow" data-aos="fade-up">
+      <section className="py-24 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 bg-radial-glow" data-aos="fade-up" id="contact-form">
         <div className="bg-white rounded-3xl shadow-2xl p-8 sm:p-10 border border-gray-100/85 text-left">
           <div className="text-center mb-8">
             <span className="text-xs uppercase tracking-widest text-brand-gold font-bold mb-2 block">Quick Inquiry</span>
@@ -678,7 +678,7 @@ Looking forward to your response!`
             <p className="text-xs text-gray-400 text-center">Fill in the details below to connect with our planners instantly on WhatsApp.</p>
           </div>
           
-          <form onSubmit={handleFormSubmit} className="flex flex-col gap-5" id="contact-form">
+          <form onSubmit={handleFormSubmit} className="flex flex-col gap-5">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
               <div className="flex flex-col gap-1.5">
                 <label htmlFor="name" className="text-[10px] uppercase tracking-wider font-bold text-gray-500">Full Name</label>
