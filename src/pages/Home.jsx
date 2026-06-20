@@ -212,41 +212,55 @@ Looking forward to your response!`
           <div className="absolute inset-0 bg-gradient-to-t from-brand-dark via-brand-dark/30 to-brand-dark/10"></div>
         </div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <span 
-            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-gold/10 border border-brand-gold/20 text-brand-gold-light text-xs font-bold tracking-widest uppercase mb-6"
-            data-aos="fade-up"
-          >
-            <i className="fas fa-star text-[10px] animate-pulse text-brand-gold"></i> Event Styling & Planning Specialists
-          </span>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center" data-aos="zoom-in" data-aos-duration="1200">
+          <div className="bg-brand-dark/60 backdrop-blur-md border border-white/10 rounded-3xl p-6 sm:p-12 md:p-16 shadow-2xl shadow-black/80 max-w-3xl mx-auto relative overflow-hidden">
+            {/* Subtle background gradient glow inside the card */}
+            <div className="absolute -top-24 -left-24 w-48 h-48 bg-brand-gold/10 rounded-full blur-3xl pointer-events-none"></div>
+            <div className="absolute -bottom-24 -right-24 w-48 h-48 bg-brand-red/10 rounded-full blur-3xl pointer-events-none"></div>
 
-          <h1 className="text-5xl sm:text-7xl md:text-8xl font-bold tracking-tight text-white mb-6 leading-tight" data-aos="fade-up" data-aos-delay="100">
-            Rockers <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-red via-[#e27478] to-brand-gold">Entertainers</span>
-          </h1>
-
-          <h2 className="text-xl sm:text-2xl md:text-3xl font-serif italic text-gray-200 mb-8 max-w-3xl mx-auto leading-relaxed font-light" data-aos="fade-up" data-aos-delay="200">
-            "Turning Celebrations Into Unforgettable Experiences"
-          </h2>
-
-          <p className="text-sm sm:text-base text-gray-400 mb-12 max-w-xl mx-auto font-light leading-relaxed tracking-wide" data-aos="fade-up" data-aos-delay="300">
-            Professional event planning, decoration, entertainment management, and execution services for weddings, birthdays, corporate affairs, and special occasions.
-          </p>
-
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4" data-aos="fade-up" data-aos-delay="400">
-            <a 
-              href="/contact.html#contact-form"
-              className="inline-flex items-center justify-center w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-brand-red to-brand-darkred hover:from-brand-gold hover:to-brand-gold-dark text-white font-bold rounded-full shadow-xl hover:shadow-brand-red/20 transform hover:-translate-y-1 transition-all duration-500 text-xs uppercase tracking-widest focus:outline-none cursor-pointer"
+            <span 
+              className="relative z-10 inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-gold/20 border border-brand-gold/30 text-brand-gold-light text-xs font-bold tracking-widest uppercase mb-6"
             >
-              <i className="fas fa-calendar-check mr-2 text-sm"></i> Book Your Event
-            </a>
-            <a 
-              href="https://wa.me/919966468877?text=Hello%2C%20I%20would%20like%20to%20know%20more%20about%20your%20event%20services." 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="inline-flex items-center justify-center w-full sm:w-auto px-8 py-4 bg-white/5 hover:bg-white/10 text-white font-semibold rounded-full border border-white/20 hover:border-white/40 transform hover:-translate-y-1 transition-all duration-300 text-xs uppercase tracking-widest"
+              <i className="fas fa-star text-[10px] animate-pulse text-brand-gold"></i> Event Styling & Planning Specialists
+            </span>
+
+            <h1 
+              className="relative z-10 text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight text-white mb-6 leading-tight"
+              style={{ textShadow: '0 4px 16px rgba(0,0,0,0.85), 0 2px 4px rgba(0,0,0,0.5)' }}
             >
-              <i className="fab fa-whatsapp mr-2 text-green-400 text-base"></i> Chat on WhatsApp
-            </a>
+              Rockers <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-red via-[#e27478] to-brand-gold">Entertainers</span>
+            </h1>
+
+            <h2 
+              className="relative z-10 text-lg sm:text-xl md:text-2xl font-serif italic text-brand-gold-light mb-6 leading-relaxed font-light"
+              style={{ textShadow: '0 2px 8px rgba(0,0,0,0.9)' }}
+            >
+              "Turning Celebrations Into Unforgettable Experiences"
+            </h2>
+
+            <p 
+              className="relative z-10 text-xs sm:text-sm text-gray-300 mb-8 max-w-xl mx-auto font-light leading-relaxed tracking-wide"
+              style={{ textShadow: '0 2px 6px rgba(0,0,0,0.9)' }}
+            >
+              Professional event planning, decoration, entertainment management, and execution services for weddings, birthdays, corporate affairs, and special occasions.
+            </p>
+
+            <div className="relative z-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+              <a 
+                href="/contact.html#contact-form"
+                className="inline-flex items-center justify-center w-full sm:w-auto px-8 py-3.5 bg-gradient-to-r from-brand-red to-brand-gold hover:from-brand-gold hover:to-brand-gold-dark text-white font-bold rounded-full shadow-xl hover:shadow-brand-red/20 transform hover:-translate-y-0.5 transition-all duration-300 text-xs uppercase tracking-widest focus:outline-none cursor-pointer"
+              >
+                <i className="fas fa-calendar-check mr-2 text-sm"></i> Book Your Event
+              </a>
+              <a 
+                href="https://wa.me/919966468877?text=Hello%2C%20I%20would%20like%20to%20know%20more%20about%20your%20event%20services." 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="inline-flex items-center justify-center w-full sm:w-auto px-8 py-3.5 bg-white/5 hover:bg-white/10 text-white font-semibold rounded-full border border-white/20 hover:border-white/40 transform hover:-translate-y-0.5 transition-all duration-300 text-xs uppercase tracking-widest"
+              >
+                <i className="fab fa-whatsapp mr-2 text-green-400 text-base"></i> Chat on WhatsApp
+              </a>
+            </div>
           </div>
         </div>
 
