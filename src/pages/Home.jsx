@@ -393,19 +393,19 @@ Looking forward to your response!`
           <div className="bg-brand-dark/95 backdrop-blur-2xl rounded-3xl shadow-2xl p-8 sm:p-10 border border-brand-gold/15">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-y-2 md:divide-y-0 md:divide-x divide-white/5">
               <div className="pt-6 md:pt-0">
-                <p className="text-4xl sm:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-brand-gold to-brand-gold-light mb-2">1500+</p>
+                <p className="text-4xl sm:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-brand-gold to-brand-gold-light mb-2">5000+</p>
                 <p className="text-[10px] uppercase tracking-widest text-gray-400 font-semibold">Events Managed</p>
               </div>
               <div className="pt-6 md:pt-0">
-                <p className="text-4xl sm:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-brand-gold to-brand-gold-light mb-2">250+</p>
+                <p className="text-4xl sm:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-brand-gold to-brand-gold-light mb-2">1000+</p>
                 <p className="text-[10px] uppercase tracking-widest text-gray-400 font-semibold">Corporate Clients</p>
               </div>
               <div className="pt-6 md:pt-0">
                 <p className="text-4xl sm:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-brand-gold to-brand-gold-light mb-2">5000+</p>
-                <p className="text-[10px] uppercase tracking-widest text-gray-400 font-semibold">Happy Customers</p>
+                <p className="text-[10px] uppercase tracking-widest text-gray-400 font-semibold">Happy Clients</p>
               </div>
               <div className="pt-6 md:pt-0">
-                <p className="text-4xl sm:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-brand-gold to-brand-gold-light mb-2">12+</p>
+                <p className="text-4xl sm:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-brand-gold to-brand-gold-light mb-2">18+</p>
                 <p className="text-[10px] uppercase tracking-widest text-gray-400 font-semibold">Years Experience</p>
               </div>
             </div>
