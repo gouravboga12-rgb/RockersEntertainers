@@ -16,7 +16,7 @@ export default function Footer() {
           {/* Socials */}
           <div className="flex items-center gap-4 mt-2">
             <a href="#" className="w-10 h-10 bg-white/5 hover:bg-brand-gold hover:text-brand-dark border border-white/5 rounded-xl flex items-center justify-center transition-all duration-300 text-gray-400" aria-label="Facebook"><i className="fab fa-facebook-f text-sm"></i></a>
-            <a href="#" className="w-10 h-10 bg-white/5 hover:bg-brand-gold hover:text-brand-dark border border-white/5 rounded-xl flex items-center justify-center transition-all duration-300 text-gray-400" aria-label="Instagram"><i className="fab fa-instagram text-sm"></i></a>
+            <a href="https://www.instagram.com/rockers.entertainers?utm_source=qr" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white/5 hover:bg-brand-gold hover:text-brand-dark border border-white/5 rounded-xl flex items-center justify-center transition-all duration-300 text-gray-400" aria-label="Instagram"><i className="fab fa-instagram text-sm"></i></a>
             <a href="https://wa.me/919966468877" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white/5 hover:bg-green-500 hover:text-white border border-white/5 rounded-xl flex items-center justify-center transition-all duration-300 text-gray-400" aria-label="WhatsApp"><i className="fab fa-whatsapp text-sm"></i></a>
             <a href="#" className="w-10 h-10 bg-white/5 hover:bg-brand-gold hover:text-brand-dark border border-white/5 rounded-xl flex items-center justify-center transition-all duration-300 text-gray-400" aria-label="YouTube"><i className="fab fa-youtube text-sm"></i></a>
           </div>
