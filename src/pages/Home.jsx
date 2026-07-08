@@ -358,7 +358,7 @@ Looking forward to your response!`
             <div>
               <h3 className="text-xl font-bold mb-4 font-serif text-brand-gold-light">Our Mission</h3>
               <p className="text-gray-400 text-sm leading-relaxed font-light">
-                To provide creative, reliable, and customer-focused event solutions that transform every celebration into a memorable experience. We commit to professional integrity, detail coordination, and visual visual craftsmanship.
+                To provide creative, reliable, and customer-focused event solutions that transform every celebration into a memorable experience. We commit to professional integrity, detail coordination, and visual craftsmanship.
               </p>
             </div>
           </div>
@@ -504,7 +504,7 @@ Looking forward to your response!`
                 data-aos-delay={100 * (idx + 1)}
               >
                 <div className="h-28 sm:h-44 overflow-hidden relative group">
-                  <img src={service.img} alt={service.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                  <img src={service.img} alt={service.title} loading="lazy" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
                   <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/80 via-brand-dark/25 to-transparent"></div>
                   <span className="absolute bottom-2.5 left-2.5 sm:bottom-4 sm:left-5 text-white font-bold text-xs sm:text-base flex items-center gap-1.5 sm:gap-2 font-serif text-gold-gradient">
                     <i className={`fas ${service.icon} text-brand-gold text-[10px] sm:text-sm`}></i> {service.title}
@@ -588,7 +588,7 @@ Looking forward to your response!`
                 data-aos-delay={100 * (idx % 4 + 1)}
               >
                 <div className="aspect-square overflow-hidden relative">
-                  <img src={item.img} alt={item.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                  <img src={item.img} alt={item.title} loading="lazy" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                   
                   {/* Hover Overlay Glow */}
                   <div className="absolute inset-0 bg-brand-dark/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
