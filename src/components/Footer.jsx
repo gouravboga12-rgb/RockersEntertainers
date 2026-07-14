@@ -78,7 +78,7 @@ export default function Footer() {
 
       {/* Bottom Copyright */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-white/5 pt-8 text-center text-xs text-gray-600 flex flex-col sm:flex-row items-center justify-between gap-4 font-light">
-        <p>&copy; 2026 Rockers Entertainers. All rights reserved.</p>
+        <p>&copy; 2026 Rockers Entertainers. All rights reserved. | Developed by <a href="https://www.codtechitsolutions.com/" target="_blank" rel="noopener noreferrer" className="hover:text-brand-gold transition-colors duration-300 font-medium">CODTECH IT SOLUTION</a></p>
         <div className="flex gap-4">
           <a href="#" className="hover:text-white transition duration-300">Privacy Policy</a>
           <span>&bull;</span>
