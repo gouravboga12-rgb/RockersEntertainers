@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import LogoMarquee from '../components/LogoMarquee'
+import LeadershipTeam from '../components/LeadershipTeam'
 
 function Typewriter({ text, delay = 80, className = "", startDelay = 0 }) {
   const [currentText, setCurrentText] = useState('');
@@ -233,9 +234,9 @@ Looking forward to your response!`
       <section className="relative min-h-screen flex items-center justify-start bg-brand-dark text-white overflow-hidden py-24">
         {/* Background Image & Dual Gradient Overlays (inspired by nikhilevents.com) */}
         <div className="absolute inset-0 z-0">
-          <img 
-            src="/hero_background.jpg" 
-            alt="Luxury Event Setup Backdrop" 
+          <img
+            src="/hero_background.jpg"
+            alt="Luxury Event Setup Backdrop"
             className="w-full h-full object-cover object-center opacity-75 scale-105 transition-transform duration-1000"
             style={{ filter: 'brightness(0.8) contrast(1.1)' }}
           />
@@ -247,13 +248,13 @@ Looking forward to your response!`
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full text-left">
           <div className="max-w-3xl">
-            <span 
+            <span
               className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-gold/20 border border-brand-gold/30 text-brand-gold-light text-xs font-bold tracking-widest uppercase mb-6"
             >
               <i className="fas fa-star text-[10px] animate-pulse text-brand-gold"></i> Event Styling & Planning Specialists
             </span>
 
-            <h1 
+            <h1
               className="text-4xl sm:text-6xl md:text-8xl font-black tracking-tight text-white mb-6 leading-[1.1] uppercase font-sans"
               style={{ textShadow: '0 4px 12px rgba(0,0,0,0.5)', minHeight: '1.2em' }}
             >
@@ -263,14 +264,14 @@ Looking forward to your response!`
               </span>
             </h1>
 
-            <h2 
+            <h2
               className="text-lg sm:text-xl md:text-2xl font-serif italic text-brand-gold-light mb-6 leading-relaxed font-light"
               style={{ textShadow: '0 2px 6px rgba(0,0,0,0.6)', minHeight: '1.5em' }}
             >
               <Typewriter text='"Turning Celebrations Into Unforgettable Experiences"' delay={40} startDelay={1500} />
             </h2>
 
-            <p 
+            <p
               className="text-sm sm:text-base text-gray-300 mb-10 max-w-2xl font-light leading-relaxed tracking-wide"
               style={{ textShadow: '0 2px 4px rgba(0,0,0,0.6)' }}
             >
@@ -279,7 +280,7 @@ Looking forward to your response!`
 
             <div className="flex flex-col sm:flex-row items-center justify-start gap-4">
               <div className="w-full sm:w-auto opacity-0 animate-popup-1">
-                <a 
+                <a
                   href="/contact.html#contact-form"
                   className="inline-flex items-center justify-center w-full px-8 py-4 bg-gradient-to-r from-brand-red to-brand-gold hover:from-brand-gold hover:to-brand-gold-dark text-white font-bold rounded-full shadow-xl shadow-brand-red/30 hover:scale-105 active:scale-95 transform transition-all duration-300 text-xs uppercase tracking-widest focus:outline-none cursor-pointer"
                 >
@@ -287,8 +288,8 @@ Looking forward to your response!`
                 </a>
               </div>
               <div className="w-full sm:w-auto opacity-0 animate-popup-2">
-                <a 
-                  href="/services.html" 
+                <a
+                  href="/services.html"
                   className="inline-flex items-center justify-center w-full px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-full border border-white/20 hover:border-white/40 hover:scale-105 active:scale-95 transform transition-all duration-300 text-xs uppercase tracking-widest backdrop-blur-md"
                 >
                   <i className="fas fa-sparkles mr-2 text-brand-gold text-base"></i> View Services
@@ -318,8 +319,8 @@ Looking forward to your response!`
             <p className="text-gray-500 leading-relaxed mb-8 font-light text-sm">
               We transform simple ideas into unforgettable experiences through custom theme creation, creative floral and structure design, reliable timeline management, and premium visual execution. We manage all visual, audio, layout, and hospitality assets to ensure stress-free event hosting.
             </p>
-            <a 
-              href="/about.html" 
+            <a
+              href="/about.html"
               className="inline-flex items-center gap-2 px-6 py-3 bg-brand-dark hover:bg-brand-gold text-white hover:text-brand-darker font-bold rounded-full shadow-lg transition duration-500 text-xs uppercase tracking-widest focus:outline-none border border-brand-gold/15"
             >
               Read More About Us <i className="fas fa-arrow-right ml-1"></i>
@@ -330,12 +331,17 @@ Looking forward to your response!`
             <div className="absolute -top-6 -left-6 w-32 h-32 bg-brand-gold/10 rounded-2xl blur-3xl"></div>
             <div className="relative z-10 border border-brand-gold/20 p-2.5 rounded-3xl bg-white shadow-2xl">
               <div className="zoom-img-container rounded-2xl overflow-hidden aspect-[4/3]">
-                <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=800&auto=format&fit=crop" 
-                     alt="Corporate Event Stage Setup" className="w-full h-full object-cover" />
+                <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=800&auto=format&fit=crop"
+                  alt="Corporate Event Stage Setup" className="w-full h-full object-cover" />
               </div>
             </div>
           </div>
         </div>
+        {/* Leadership Team Integration */}
+        <div className="mt-20 pt-16 border-t border-gray-100">
+          <LeadershipTeam isDark={false} />
+        </div>
+
 
         {/* Vision / Mission Integration */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-20">
@@ -373,10 +379,10 @@ Looking forward to your response!`
           </div>
           <div className="grid grid-cols-2 md:grid-cols-6 gap-6 text-center">
             {values.map((v, index) => (
-              <div 
+              <div
                 key={index}
-                className="bg-white hover:bg-brand-dark/5 border border-gray-100 hover:border-brand-gold/30 rounded-2xl p-6 transition-all duration-500 flex flex-col items-center shadow-sm" 
-                data-aos="fade-up" 
+                className="bg-white hover:bg-brand-dark/5 border border-gray-100 hover:border-brand-gold/30 rounded-2xl p-6 transition-all duration-500 flex flex-col items-center shadow-sm"
+                data-aos="fade-up"
                 data-aos-delay={100 * (index + 1)}
               >
                 <div className="w-12 h-12 bg-brand-gold/10 text-brand-gold rounded-xl flex items-center justify-center text-xl mb-4 border border-brand-gold/15">
@@ -393,15 +399,15 @@ Looking forward to your response!`
           <div className="bg-brand-dark/95 backdrop-blur-2xl rounded-3xl shadow-2xl p-8 sm:p-10 border border-brand-gold/15">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-y-2 md:divide-y-0 md:divide-x divide-white/5">
               <div className="pt-6 md:pt-0">
-                <p className="text-4xl sm:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-brand-gold to-brand-gold-light mb-2">5000+</p>
+                <p className="text-4xl sm:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-brand-gold to-brand-gold-light mb-2">2897+</p>
                 <p className="text-[10px] uppercase tracking-widest text-gray-400 font-semibold">Events Managed</p>
               </div>
               <div className="pt-6 md:pt-0">
-                <p className="text-4xl sm:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-brand-gold to-brand-gold-light mb-2">1000+</p>
+                <p className="text-4xl sm:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-brand-gold to-brand-gold-light mb-2">500+</p>
                 <p className="text-[10px] uppercase tracking-widest text-gray-400 font-semibold">Corporate Clients</p>
               </div>
               <div className="pt-6 md:pt-0">
-                <p className="text-4xl sm:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-brand-gold to-brand-gold-light mb-2">5000+</p>
+                <p className="text-4xl sm:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-brand-gold to-brand-gold-light mb-2">2897+</p>
                 <p className="text-[10px] uppercase tracking-widest text-gray-400 font-semibold">Happy Clients</p>
               </div>
               <div className="pt-6 md:pt-0">
@@ -497,7 +503,7 @@ Looking forward to your response!`
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 items-start">
             {services.map((service, idx) => (
-              <div 
+              <div
                 key={idx}
                 className="bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-100/80 flex flex-col h-auto premium-card glow-border w-full"
                 data-aos="fade-up"
@@ -510,13 +516,13 @@ Looking forward to your response!`
                     <i className={`fas ${service.icon} text-brand-gold text-[10px] sm:text-sm`}></i> {service.title}
                   </span>
                 </div>
-                
+
                 <div className="p-3 sm:p-5 flex-grow flex flex-col justify-between text-left">
                   <div>
                     <p className="text-gray-500 text-[10px] sm:text-xs leading-relaxed mb-3 font-light">
                       {service.shortDesc}
                     </p>
-                    
+
                     {/* Collapsible Points */}
                     <div className={`transition-all duration-300 overflow-hidden ${expandedServices[idx] ? 'max-h-60 opacity-100 mb-4' : 'max-h-0 opacity-0'}`}>
                       <ul className="space-y-1.5 sm:space-y-2 border-t border-gray-100 pt-3">
@@ -529,7 +535,7 @@ Looking forward to your response!`
                       </ul>
                     </div>
 
-                    <button 
+                    <button
                       onClick={() => toggleServiceExpand(idx)}
                       className="inline-flex items-center gap-1 text-[9px] sm:text-xs font-bold text-brand-red hover:text-brand-gold transition-colors duration-300 mb-4 focus:outline-none cursor-pointer"
                     >
@@ -538,9 +544,9 @@ Looking forward to your response!`
                     </button>
                   </div>
 
-                  <a 
-                    href={getWhatsAppLink(service.whatsapp)} 
-                    target="_blank" 
+                  <a
+                    href={getWhatsAppLink(service.whatsapp)}
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="relative inline-flex items-center justify-center w-full py-2 sm:py-2.5 bg-gradient-to-r from-brand-red to-brand-darkred hover:from-brand-gold hover:to-brand-gold-dark text-white text-[9px] sm:text-[10px] uppercase tracking-widest font-bold rounded-xl shadow-md transition-all duration-500 overflow-hidden group/btn focus:outline-none"
                   >
@@ -555,7 +561,7 @@ Looking forward to your response!`
           </div>
 
           <div className="mt-14" data-aos="fade-up">
-            <a 
+            <a
               href="/services.html"
               className="inline-flex items-center justify-center px-8 py-3.5 bg-brand-dark hover:bg-brand-gold text-white hover:text-brand-dark font-bold text-xs uppercase tracking-widest rounded-full shadow-lg transition-all duration-500 focus:outline-none cursor-pointer border border-brand-gold/20"
             >
@@ -580,7 +586,7 @@ Looking forward to your response!`
           {/* 8 Images Grid Preview */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
             {previewGalleryItems.map((item, idx) => (
-              <div 
+              <div
                 key={idx}
                 className="bg-brand-darker rounded-2xl overflow-hidden shadow-md border border-white/5 group hover:-translate-y-1.5 hover:shadow-xl transition-all duration-300 cursor-pointer flex flex-col justify-between"
                 onClick={() => openLightbox(idx)}
@@ -589,7 +595,7 @@ Looking forward to your response!`
               >
                 <div className="aspect-square overflow-hidden relative">
                   <img src={item.img} alt={item.title} loading="lazy" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                  
+
                   {/* Hover Overlay Glow */}
                   <div className="absolute inset-0 bg-brand-dark/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                     <div className="w-10 h-10 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center text-white text-base border border-white/20 transform scale-75 group-hover:scale-100 transition-transform duration-300">
@@ -608,8 +614,8 @@ Looking forward to your response!`
 
           {/* View Full Gallery Link Button */}
           <div className="text-center mt-14" data-aos="fade-up">
-            <a 
-              href="/gallery.html" 
+            <a
+              href="/gallery.html"
               className="inline-flex items-center gap-2 px-8 py-3.5 bg-gradient-to-r from-brand-red to-brand-darkred hover:from-brand-gold hover:to-brand-gold-dark text-white font-bold rounded-full shadow-lg transition duration-500 text-xs uppercase tracking-widest text-center"
             >
               View Full Gallery <i className="fas fa-images"></i>
@@ -631,10 +637,10 @@ Looking forward to your response!`
 
         <div className="relative bg-brand-darker rounded-3xl shadow-2xl p-8 sm:p-14 border border-white/5 max-w-4xl mx-auto backdrop-blur-xl">
           <div className="absolute top-4 left-6 text-brand-gold/10 text-9xl pointer-events-none font-serif select-none">“</div>
-          
+
           <div className="relative z-10 min-h-[180px] flex items-center justify-center">
             {testimonials.map((t, index) => (
-              <div 
+              <div
                 key={index}
                 className={`text-center transition-all duration-500 ${activeTestimonial === index ? 'block scale-100 opacity-100' : 'hidden scale-95 opacity-0'}`}
               >
@@ -656,12 +662,11 @@ Looking forward to your response!`
 
           <div className="flex justify-center gap-2.5 mt-8 relative z-20">
             {testimonials.map((_, index) => (
-              <button 
+              <button
                 key={index}
-                onClick={() => setActiveTestimonial(index)} 
-                className={`h-1.5 rounded-full transition-all duration-500 focus:outline-none cursor-pointer ${
-                  activeTestimonial === index ? 'bg-brand-gold w-8' : 'bg-white/20 hover:bg-white/40 w-1.5'
-                }`}
+                onClick={() => setActiveTestimonial(index)}
+                className={`h-1.5 rounded-full transition-all duration-500 focus:outline-none cursor-pointer ${activeTestimonial === index ? 'bg-brand-gold w-8' : 'bg-white/20 hover:bg-white/40 w-1.5'
+                  }`}
               />
             ))}
           </div>
@@ -677,21 +682,21 @@ Looking forward to your response!`
             <div className="w-12 h-[2px] bg-brand-gold mx-auto mb-4"></div>
             <p className="text-xs text-gray-400 text-center">Fill in the details below to connect with our planners instantly on WhatsApp.</p>
           </div>
-          
+
           <form onSubmit={handleFormSubmit} className="flex flex-col gap-5">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
               <div className="flex flex-col gap-1.5">
                 <label htmlFor="name" className="text-[10px] uppercase tracking-wider font-bold text-gray-500">Full Name</label>
                 <div className="relative">
                   <span className="absolute inset-y-0 left-0 pl-4 flex items-center text-gray-400"><i className="fas fa-user text-xs"></i></span>
-                  <input 
-                    type="text" 
-                    id="name" 
-                    name="name" 
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
                     value={formData.name}
                     onChange={handleInputChange}
-                    required 
-                    placeholder="John Doe" 
+                    required
+                    placeholder="John Doe"
                     className="w-full pl-11 pr-4 py-3 bg-brand-gray border border-gray-200/80 focus:border-brand-gold focus:ring-1 focus:ring-brand-gold focus:bg-white rounded-xl text-sm transition duration-300 outline-none"
                   />
                 </div>
@@ -701,14 +706,14 @@ Looking forward to your response!`
                 <label htmlFor="phone" className="text-[10px] uppercase tracking-wider font-bold text-gray-500">Phone Number</label>
                 <div className="relative">
                   <span className="absolute inset-y-0 left-0 pl-4 flex items-center text-gray-400"><i className="fas fa-phone-alt text-xs"></i></span>
-                  <input 
-                    type="tel" 
-                    id="phone" 
-                    name="phone" 
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
                     value={formData.phone}
                     onChange={handleInputChange}
-                    required 
-                    placeholder="9966468877" 
+                    required
+                    placeholder="9966468877"
                     className="w-full pl-11 pr-4 py-3 bg-brand-gray border border-gray-200/80 focus:border-brand-gold focus:ring-1 focus:ring-brand-gold focus:bg-white rounded-xl text-sm transition duration-300 outline-none"
                   />
                 </div>
@@ -720,14 +725,14 @@ Looking forward to your response!`
                 <label htmlFor="email" className="text-[10px] uppercase tracking-wider font-bold text-gray-500">Email Address</label>
                 <div className="relative">
                   <span className="absolute inset-y-0 left-0 pl-4 flex items-center text-gray-400"><i className="fas fa-envelope text-xs"></i></span>
-                  <input 
-                    type="email" 
-                    id="email" 
-                    name="email" 
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
                     value={formData.email}
                     onChange={handleInputChange}
-                    required 
-                    placeholder="john@example.com" 
+                    required
+                    placeholder="john@example.com"
                     className="w-full pl-11 pr-4 py-3 bg-brand-gray border border-gray-200/80 focus:border-brand-gold focus:ring-1 focus:ring-brand-gold focus:bg-white rounded-xl text-sm transition duration-300 outline-none"
                   />
                 </div>
@@ -737,12 +742,12 @@ Looking forward to your response!`
                 <label htmlFor="eventType" className="text-[10px] uppercase tracking-wider font-bold text-gray-500">Event Type</label>
                 <div className="relative">
                   <span className="absolute inset-y-0 left-0 pl-4 flex items-center text-gray-400"><i className="fas fa-glass-cheers text-xs"></i></span>
-                  <select 
-                    id="eventType" 
-                    name="eventType" 
+                  <select
+                    id="eventType"
+                    name="eventType"
                     value={formData.eventType}
                     onChange={handleInputChange}
-                    required 
+                    required
                     className="w-full pl-11 pr-4 py-3 bg-brand-gray border border-gray-200/80 focus:border-brand-gold focus:ring-1 focus:ring-brand-gold focus:bg-white rounded-xl text-sm appearance-none transition duration-300 outline-none cursor-pointer"
                   >
                     <option value="" disabled>Select Category</option>
@@ -762,19 +767,19 @@ Looking forward to your response!`
 
             <div className="flex flex-col gap-1.5">
               <label htmlFor="message" className="text-[10px] uppercase tracking-wider font-bold text-gray-500">Requirements</label>
-              <textarea 
-                id="message" 
-                name="message" 
-                rows="3" 
+              <textarea
+                id="message"
+                name="message"
+                rows="3"
                 value={formData.message}
                 onChange={handleInputChange}
-                placeholder="Brief description of date, theme, decoration needs..." 
+                placeholder="Brief description of date, theme, decoration needs..."
                 className="w-full px-4 py-3 bg-brand-gray border border-gray-200/80 focus:border-brand-gold focus:ring-1 focus:ring-brand-gold focus:bg-white rounded-xl text-sm transition duration-300 outline-none"
               />
             </div>
 
-            <button 
-              type="submit" 
+            <button
+              type="submit"
               disabled={isSubmitting}
               className="relative mt-2 w-full py-4 bg-gradient-to-r from-brand-red to-brand-darkred hover:from-brand-gold hover:to-brand-gold-dark text-white font-bold rounded-xl shadow-lg transition-all duration-500 text-xs uppercase tracking-widest flex items-center justify-center gap-2 focus:outline-none disabled:opacity-50 overflow-hidden group/submit cursor-pointer"
             >
@@ -797,7 +802,7 @@ Looking forward to your response!`
 
       {/* Lightbox Modal Overlay (copied from Gallery.jsx) */}
       {lightboxOpen && (
-        <div 
+        <div
           className="fixed inset-0 z-50 bg-black/95 flex flex-col justify-between py-6 px-4"
         >
           {/* Top controls bar */}
@@ -806,9 +811,9 @@ Looking forward to your response!`
               <span className="text-xs uppercase tracking-widest text-brand-gold font-bold">{previewGalleryItems[lightboxIndex]?.category}</span>
               <h3 className="text-white text-lg font-semibold font-serif">{previewGalleryItems[lightboxIndex]?.title}</h3>
             </div>
-            <button 
-              onClick={() => setLightboxOpen(false)} 
-              className="text-white hover:text-brand-gold text-3xl focus:outline-none p-2 transition-colors duration-300 cursor-pointer" 
+            <button
+              onClick={() => setLightboxOpen(false)}
+              className="text-white hover:text-brand-gold text-3xl focus:outline-none p-2 transition-colors duration-300 cursor-pointer"
               aria-label="Close Lightbox"
             >
               <i className="fas fa-times"></i>
@@ -817,22 +822,22 @@ Looking forward to your response!`
 
           {/* Main Display Area */}
           <div className="relative w-full max-w-4xl mx-auto flex items-center justify-center flex-grow py-8">
-            <button 
-              onClick={prevImage} 
+            <button
+              onClick={prevImage}
               className="absolute left-0 md:-left-16 z-20 text-white hover:text-brand-gold text-4xl p-4 focus:outline-none transition-colors duration-300 cursor-pointer"
               aria-label="Previous Item"
             >
               <i className="fas fa-chevron-left"></i>
             </button>
 
-            <img 
-              src={previewGalleryItems[lightboxIndex]?.img} 
-              alt={previewGalleryItems[lightboxIndex]?.title} 
+            <img
+              src={previewGalleryItems[lightboxIndex]?.img}
+              alt={previewGalleryItems[lightboxIndex]?.title}
               className="max-w-full max-h-[70vh] rounded-lg shadow-2xl object-contain border border-white/5"
             />
 
-            <button 
-              onClick={nextImage} 
+            <button
+              onClick={nextImage}
               className="absolute right-0 md:-right-16 z-20 text-white hover:text-brand-gold text-4xl p-4 focus:outline-none transition-colors duration-300 cursor-pointer"
               aria-label="Next Item"
             >
@@ -842,9 +847,9 @@ Looking forward to your response!`
 
           {/* Bottom controls / CTA */}
           <div className="text-center z-10">
-            <a 
-              href={getGalleryWhatsAppLink(previewGalleryItems[lightboxIndex]?.title)} 
-              target="_blank" 
+            <a
+              href={getGalleryWhatsAppLink(previewGalleryItems[lightboxIndex]?.title)}
+              target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-6 py-3 bg-green-500 hover:bg-green-600 text-white font-bold rounded-full shadow-lg transition duration-300 text-sm focus:outline-none"
             >

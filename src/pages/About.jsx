@@ -1,5 +1,6 @@
 import React from 'react'
 import LogoMarquee from '../components/LogoMarquee'
+import LeadershipTeam from '../components/LeadershipTeam'
 
 export default function About() {
   const values = [
@@ -80,6 +81,11 @@ export default function About() {
           </div>
         </div>
       </section>
+      {/* Leadership & Core Team */}
+      <section className="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-gray-100">
+        <LeadershipTeam isDark={false} />
+      </section>
+
 
       {/* Vision, Mission & Values */}
       <section className="py-28 bg-brand-dark text-white border-y border-white/5 relative">
